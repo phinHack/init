@@ -45,4 +45,3 @@ mkdir -p $HOME/.nvim/
 cp .vimrc $HOME/.nvim/init.vim
 cp .vimrc $HOME/.vimrc
 
-sudo apt install vim -y
