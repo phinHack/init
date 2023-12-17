@@ -28,9 +28,13 @@ sudo chsh -s $USER $(which zsh)
 
 # install zsh pure : make zsh pretty
 git clone --depth=1 https://github.com/sindresorhus/pure.git $HOME/.zsh_phinguin/pure
-echo -e "fpath+=("$HOME/.zsh_phinguin/pure")\nautoload -U promptinit; promptinit\nprompt pure" >> $HOME/.zshrc
+echo -e "fpath+=("$HOME/.zsh_phinguin/pure")
+autoload -U promptinit; promptinit
+prompt pure" >> $HOME/.zshrc
 
-echo -e "zmodload zsh/nearcolor\nzstyle :prompt:pure:user color '#c2f0ff'\nzstyle :prompt:pure:host color '#c2f0ff'"
+echo -e "zmodload zsh/nearcolor
+zstyle :prompt:pure:user color '#c2f0ff'
+zstyle :prompt:pure:host color '#c2f0ff'" >> $HOME/.zshrc
 
 # install zsh syntax highlight
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh_phinguin/zsh-syntax-highlighting
@@ -52,4 +56,6 @@ cp .vimrc $HOME/.nvim/init.vim
 cp .vimrc $HOME/.vimrc
 
 # 4. other stuff
-echo -e "export LS_COLORS=$LS_COLORS:'ow=36:'\nulimit -c unlimited\nalias tmux="TERM=screen-256color-bce tmux""
+echo -e "export LS_COLORS=$LS_COLORS:'ow=36:'
+ulimit -c unlimited
+alias tmux="TERM=screen-256color-bce tmux"" >> $HOME/.zshrc
