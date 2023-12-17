@@ -2,7 +2,7 @@
 
 # prerequisites
 sudo apt update
-sudo apt install wget, git, curl, tmux, zsh, vim -y
+sudo apt-get install wget, git, curl, tmux, zsh, vim -y
 
 # 1. install tmux
 # vi -c "PlugInstall" -c "redraw" -c "qa"
@@ -38,8 +38,8 @@ echo "ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#fcacb9'" >> $HOME/.zshrc
 #____________________________________________________________________________________________________
 
 # 3. install vim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir -p $HOME/.nvim/
 cp .vimrc $HOME/.nvim/init.vim
