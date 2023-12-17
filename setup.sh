@@ -51,3 +51,5 @@ mkdir -p $HOME/.nvim/
 cp .vimrc $HOME/.nvim/init.vim
 cp .vimrc $HOME/.vimrc
 
+# 4. other stuff
+echo -e "export LS_COLORS=$LS_COLORS:'ow=36:'\nulimit -c unlimited\nalias tmux="TERM=screen-256color-bce tmux""
