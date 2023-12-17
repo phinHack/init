@@ -48,7 +48,12 @@ echo "ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#fcacb9'" >> $HOME/.zshrc
 #____________________________________________________________________________________________________
 
 # 3. install vim
+# for normal user
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# for root
+sudo curl -fLo /root/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir -p $HOME/.nvim/
