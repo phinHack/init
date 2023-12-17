@@ -61,6 +61,6 @@ cp .vimrc $HOME/.nvim/init.vim
 cp .vimrc $HOME/.vimrc
 
 # 4. other stuff
-echo -e "export LS_COLORS=$LS_COLORS:'ow=36:'
+echo -e "export LS_COLORS=\$LS_COLORS:'ow=36:'
 ulimit -c unlimited
-alias tmux="TERM=screen-256color-bce tmux"" >> $HOME/.zshrc
+alias tmux=\"TERM=screen-256color-bce tmux\"" >> $HOME/.zshrc
