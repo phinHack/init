@@ -52,13 +52,17 @@ echo "ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#fcacb9'" >> $HOME/.zshrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir -p $HOME/.nvim/
+cp .vimrc $HOME/.nvim/init.vim
+cp .vimrc $HOME/.vimrc
+
 # for root
 sudo curl -fLo /root/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-mkdir -p $HOME/.nvim/
-cp .vimrc $HOME/.nvim/init.vim
-cp .vimrc $HOME/.vimrc
+sudo mkdir -p /root/.nvim/
+cp .vimrc /root/.nvim/init.vim
+cp .vimrc /root/.vimrc
 
 # 4. other stuff
 echo -e "export LS_COLORS=\$LS_COLORS:'ow=36:'
