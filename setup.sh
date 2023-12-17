@@ -2,7 +2,7 @@
 
 # prerequisites
 sudo apt update
-sudo apt-get install wget, git, curl, tmux, zsh, vim -y
+sudo apt install wget git curl tmux zsh vim -y
 
 # 1. install tmux
 # vi -c "PlugInstall" -c "redraw" -c "qa"
@@ -18,13 +18,16 @@ tmux source ~/.tmux.conf
 # install zsh
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 
+# change zsh to default shell
+sudo chsh -s $USER $(which zsh) 
+
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.zsh_phinguin/powerlevel10k
 echo "source $HOME/.zsh_phinguin/powerlevel10k" >> $HOME/.zshrc
 
 # install zsh pure : make zsh pretty
 git clone --depth=1 https://github.com/sindresorhus/pure.git $HOME/.zsh_phinguin/pure
-echo "fpath+=("$HOME/.zsh_phinguin/pure")\nautoload -U promptinit; promptinit\nprompt pure" >> $HOME/.zshrc
+echo -e "fpath+=("$HOME/.zsh_phinguin/pure")\nautoload -U promptinit; promptinit\nprompt pure" >> $HOME/.zshrc
 
 # install zsh syntax highlight
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh_phinguin/zsh-syntax-highlighting
