@@ -21,7 +21,6 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.zsh_phinguin/powerlevel10k
 echo "source $HOME/.zsh_phinguin/powerlevel10k" >> $HOME/.zshrc
-cp .p10k.zsh ~/
 
 # install zsh pure : make zsh pretty
 git clone --depth=1 https://github.com/sindresorhus/pure.git $HOME/.zsh_phinguin/pure
