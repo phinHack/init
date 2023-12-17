@@ -30,6 +30,8 @@ sudo chsh -s $USER $(which zsh)
 git clone --depth=1 https://github.com/sindresorhus/pure.git $HOME/.zsh_phinguin/pure
 echo -e "fpath+=("$HOME/.zsh_phinguin/pure")\nautoload -U promptinit; promptinit\nprompt pure" >> $HOME/.zshrc
 
+echo -e "zmodload zsh/nearcolor\nzstyle :prompt:pure:user color '#c2f0ff'\nzstyle :prompt:pure:host color '#c2f0ff'"
+
 # install zsh syntax highlight
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.zsh_phinguin/zsh-syntax-highlighting
 echo "source $HOME/.zsh_phinguin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
