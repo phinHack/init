@@ -1,1 +1,1 @@
-#Setting up tmux, oh-my-zsh, and vim
+# Setting up tmux, oh-my-zsh, and vim
